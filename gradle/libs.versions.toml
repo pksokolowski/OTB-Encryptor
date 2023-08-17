@@ -1,4 +1,5 @@
 [versions]
+kotlin = "1.8.10"
 ktx = "1.10.1"
 lifecycle-runtime-ktx = "2.6.1"
 activity-compose = "1.7.2"
@@ -6,10 +7,10 @@ compose-bom = "2023.08.00"
 junit = "1.1.5"
 espresso = "3.5.1"
 agp = "8.1.0"
-org-jetbrains-kotlin-android = "1.8.10"
+hilt = "2.42"
 junit-junit = "4.13.2"
 appcompat = "1.6.1"
-material = "1.8.0"
+material = "1.9.0"
 composeCompiler = "1.4.3"
 
 [libraries]
@@ -33,6 +34,11 @@ junit-junit = { group = "junit", name = "junit", version.ref = "junit-junit" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+
 [plugins]
 com-android-library = { id = "com.android.library", version.ref = "agp" }
-org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
