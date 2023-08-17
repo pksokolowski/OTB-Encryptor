@@ -1,4 +1,4 @@
-package com.github.pksokolowski.otbencryptor.ui.theme
+package com.github.pksokolowski.design.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.github.pksokolowski.otbencryptor.ui.theme
+package com.github.pksokolowski.design.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "OTB Encryptor"
 include(":app")
+include(":design")

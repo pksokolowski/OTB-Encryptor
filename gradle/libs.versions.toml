@@ -5,6 +5,12 @@ activity-compose = "1.7.2"
 compose-bom = "2023.08.00"
 junit = "1.1.5"
 espresso = "3.5.1"
+agp = "8.1.0"
+org-jetbrains-kotlin-android = "1.8.10"
+junit-junit = "4.13.2"
+appcompat = "1.6.1"
+material = "1.8.0"
+composeCompiler = "1.4.3"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -23,5 +29,10 @@ compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-mani
 
 junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
 espresso = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+junit-junit = { group = "junit", name = "junit", version.ref = "junit-junit" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
+com-android-library = { id = "com.android.library", version.ref = "agp" }
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
