@@ -13,6 +13,7 @@ appcompat = "1.6.1"
 material = "1.9.0"
 composeCompiler = "1.4.3"
 compose-navigation = "2.7.0"
+org-jetbrains-kotlin-jvm = "1.8.10"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -46,3 +47,4 @@ com-android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }

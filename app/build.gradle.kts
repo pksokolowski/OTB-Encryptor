@@ -1,3 +1,4 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id("com.android.application")
     alias(libs.plugins.kotlin)
@@ -58,6 +59,8 @@ tasks.withType(type = org.jetbrains.kotlin.gradle.internal.KaptGenerateStubsTask
 
 dependencies {
     implementation(project(":design"))
+    implementation(project(":feature:account"))
+    implementation(project(":feature:contacts"))
 
     implementation(libs.androidx.ktx)
     implementation(libs.lifecycle.runtime.ktx)
