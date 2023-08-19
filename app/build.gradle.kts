@@ -33,17 +33,20 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "1.8"
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
+    }
+    kapt {
+        correctErrorTypes = true
     }
     packaging {
         resources {
@@ -53,8 +56,7 @@ android {
 }
 
 tasks.withType(type = org.jetbrains.kotlin.gradle.internal.KaptGenerateStubsTask::class) {
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
-
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8.toString()
 }
 
 dependencies {
@@ -72,9 +74,10 @@ dependencies {
     implementation(libs.compose.material3)
 
     implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+
     implementation(libs.compose.navigation)
     implementation(libs.androidx.navigation.runtime.ktx)
-    kapt(libs.hilt.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.junit)

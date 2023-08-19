@@ -1,5 +1,6 @@
 package com.github.pksokolowski.account.landing
 
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
@@ -13,7 +14,7 @@ fun NavController.navigateToLanding(navOptions: NavOptions? = null) {
 
 internal fun NavGraphBuilder.landingScreen() {
     composable(LandingRoute) {
-        //val viewModel: ConversationViewModel = hiltViewModel()
+        val viewModel: LandingViewModel = hiltViewModel()
         //val uiState = viewModel.uiState.collectAsStateWithLifecycle()
         LandingScreen(
 
