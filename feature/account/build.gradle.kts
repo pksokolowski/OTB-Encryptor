@@ -62,6 +62,7 @@ dependencies {
 
     implementation(libs.hilt)
     implementation(libs.hilt.navigation.compose)
+    implementation(project(mapOf("path" to ":core")))
     kapt(libs.hilt.compiler)
 
     implementation(libs.compose.navigation)
