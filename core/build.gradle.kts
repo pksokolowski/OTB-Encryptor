@@ -5,6 +5,14 @@ plugins {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.withType(type = org.jetbrains.kotlin.gradle.internal.KaptGenerateStubsTask::class) {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8.toString()
+}
+
+dependencies {
+
 }
