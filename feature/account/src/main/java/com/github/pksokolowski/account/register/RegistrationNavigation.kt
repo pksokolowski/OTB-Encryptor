@@ -16,7 +16,7 @@ internal fun NavGraphBuilder.registrationScreen() {
     composable(LandingRoute) {
         val viewModel: RegistrationViewModel = hiltViewModel()
         //val uiState = viewModel.uiState.collectAsStateWithLifecycle()
-        LandingScreen(
+        RegistrationScreen(
 
         )
     }

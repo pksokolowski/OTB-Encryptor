@@ -6,6 +6,8 @@ import androidx.navigation.NavOptions
 import androidx.navigation.navigation
 import com.github.pksokolowski.account.landing.LandingRoute
 import com.github.pksokolowski.account.landing.landingScreen
+import com.github.pksokolowski.account.register.navigateToRegistration
+import com.github.pksokolowski.account.register.registrationScreen
 
 val AccountGraphRoutePattern = "account"
 
@@ -18,6 +20,9 @@ fun NavGraphBuilder.accountGraph(navController: NavController) {
         startDestination = LandingRoute,
         route = AccountGraphRoutePattern
     ) {
-        landingScreen()
+        landingScreen(
+            onNeedToRegister = { navController.navigateToRegistration() }
+        )
+        registrationScreen()
     }
 }
