@@ -10,22 +10,35 @@ import javax.inject.Inject
 
 @HiltViewModel
 internal class RegistrationViewModel @Inject constructor(
-    accountRepository: AccountRepository
 ) : ViewModel() {
 
-    private val _destination = MutableStateFlow<Destination?>(null)
-    val destination = _destination.asStateFlow()
+    private val _uiState = MutableStateFlow<UiState>(UiState())
+    val uiState = _uiState.asStateFlow()
 
-    init {
-        if (accountRepository.getAccount() != null) {
-            _destination.value = Destination.Login
-        } else {
-            _destination.value = Destination.Registration
-        }
+    private fun setState(body: UiState.() -> UiState) {
+        _uiState.value = _uiState.value.body()
+    }
+
+    fun setPassword1(passwd: String) {
+        setState { copy(password1 = passwd) }
+    }
+
+    fun setPassword2(passwd: String) {
+        setState { copy(password2 = passwd) }
+    }
+
+    fun register(){
+
     }
 }
 
 internal enum class Destination {
-    Registration,
     Login,
 }
+
+internal data class UiState(
+    val password1: String = "",
+    val password2: String = "",
+
+    val redirectTo: Destination? = null
+)

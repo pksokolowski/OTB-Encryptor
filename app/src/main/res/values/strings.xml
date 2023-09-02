@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">OTB Encryptor</string>
+
+    <string name="common_password">Password</string>
 </resources>

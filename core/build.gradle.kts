@@ -43,14 +43,16 @@ tasks.withType(type = org.jetbrains.kotlin.gradle.internal.KaptGenerateStubsTask
 }
 
 dependencies {
-
+    implementation(libs.coroutines)
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
 
     implementation(libs.androidx.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
+
     testImplementation(libs.junit.junit)
     androidTestImplementation(libs.junit)
     androidTestImplementation(libs.espresso)
+    testImplementation(libs.coroutines.test)
 }

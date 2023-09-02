@@ -72,6 +72,7 @@ dependencies {
     implementation(libs.compose.ui.graphics)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
+    implementation(libs.coroutines)
 
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
@@ -79,6 +80,7 @@ dependencies {
     implementation(libs.compose.navigation)
     implementation(libs.androidx.navigation.runtime.ktx)
 
+    testImplementation(libs.coroutines.test)
     testImplementation(libs.junit)
     androidTestImplementation(libs.junit)
     androidTestImplementation(libs.espresso)

@@ -2,6 +2,7 @@
 kotlin = "1.8.10"
 ktx = "1.10.1"
 lifecycle-runtime-ktx = "2.6.1"
+lifecycle-runtime-compose = "2.6.0-beta01"
 activity-compose = "1.7.2"
 compose-bom = "2023.08.00"
 junit = "1.1.5"
@@ -13,12 +14,14 @@ junit-junit = "4.13.2"
 appcompat = "1.6.1"
 material = "1.9.0"
 composeCompiler = "1.4.3"
-compose-navigation = "2.7.0"
+compose-navigation = "2.7.1"
 org-jetbrains-kotlin-jvm = "1.8.10"
+coroutines = "1.7.3"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
 lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
+lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle-runtime-compose" }
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
@@ -26,6 +29,7 @@ compose-ui = { group = "androidx.compose.ui", name = "ui" }
 compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
 
 compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "compose-navigation" }
 androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "compose-navigation" }
@@ -43,6 +47,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt-navigation-compose" }
+
+coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
 
 [plugins]
 com-android-library = { id = "com.android.library", version.ref = "agp" }

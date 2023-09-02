@@ -50,6 +50,7 @@ tasks.withType(type = org.jetbrains.kotlin.gradle.internal.KaptGenerateStubsTask
 
 dependencies {
 
+    implementation(libs.coroutines)
     implementation(libs.androidx.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -59,6 +60,8 @@ dependencies {
     implementation(libs.compose.ui.graphics)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
+    implementation(libs.compose.material.icons.extended)
+    implementation(libs.lifecycle.runtime.compose)
 
     implementation(libs.hilt)
     implementation(libs.hilt.navigation.compose)
@@ -68,6 +71,7 @@ dependencies {
     implementation(libs.compose.navigation)
     implementation(libs.androidx.navigation.runtime.ktx)
 
+    testImplementation(libs.coroutines.test)
     testImplementation(libs.junit.junit)
     androidTestImplementation(libs.junit)
     androidTestImplementation(libs.espresso)
