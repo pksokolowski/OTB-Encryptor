@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/account" />
             <option value="$PROJECT_DIR$/feature/contacts" />
+            <option value="$PROJECT_DIR$/feature/cryptography" />
           </set>
         </option>
       </GradleProjectSettings>
