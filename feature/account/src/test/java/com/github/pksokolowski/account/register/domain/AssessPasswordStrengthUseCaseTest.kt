@@ -3,7 +3,7 @@ package com.github.pksokolowski.account.register.domain
 import com.github.pksokolowski.account.register.domain.PasswordStrength.CASUAL
 import com.github.pksokolowski.account.register.domain.PasswordStrength.ENTERPRISE
 import com.github.pksokolowski.account.register.domain.PasswordStrength.MAXED_OUT
-import com.github.pksokolowski.account.register.domain.PasswordStrength.SEMI_SERIOUS
+import com.github.pksokolowski.account.register.domain.PasswordStrength.DECENT
 import com.github.pksokolowski.account.register.domain.PasswordStrength.TOP_SECRET
 import com.github.pksokolowski.account.register.domain.PasswordStrength.WEAK
 import junit.framework.TestCase.assertEquals
@@ -47,12 +47,12 @@ class AssessPasswordStrengthUseCaseTest {
     @Test
     fun `A mix of 11 different characters (and numbers) across 23 characters`() =
         whenPasswordCandidateIs("abcdef1aabcdef1a2222222")
-            .thenVerdictIs(SEMI_SERIOUS)
+            .thenVerdictIs(DECENT)
 
     @Test
     fun `A reasonable passphrase with medium length`() =
         whenPasswordCandidateIs("karczma stoi otworem przed przejezdnymi")
-            .thenVerdictIs(SEMI_SERIOUS)
+            .thenVerdictIs(DECENT)
 
     @Test
     fun `A mix of 13 different characters across 4 charsets across 25 characters`() =

@@ -24,7 +24,7 @@ internal class AssessPasswordStrengthUseCase @Inject constructor(
             return@withContext PasswordStrength.CASUAL
         }
         if (score < 8 || numOfExtraCharSpacesCovered < 3) {
-            return@withContext PasswordStrength.SEMI_SERIOUS
+            return@withContext PasswordStrength.DECENT
         }
         if (score < 23) {
             return@withContext PasswordStrength.ENTERPRISE
@@ -58,7 +58,7 @@ private fun numOfExtraCoveredCharSpaces(candidate: String): Int {
 internal enum class PasswordStrength {
     WEAK,
     CASUAL,
-    SEMI_SERIOUS, // around 112 bits under some conditions
+    DECENT, // around 112 bits under some conditions
     ENTERPRISE,  // around 128 bit under some conditions
     TOP_SECRET, // around 192 bit under some conditions
     MAXED_OUT, // around 256 bits under some conditions

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pass_strength_weak">weak</string>
+    <string name="pass_strength_casual">casual</string>
+    <string name="pass_strength_decent">decent</string>
+    <string name="pass_strength_enterprise">enterprise</string>
+    <string name="pass_strength_top_secret">top-secret</string>
+    <string name="pass_strength_maxed_out">maxed-out</string>
+</resources>
